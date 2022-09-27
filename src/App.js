@@ -10,6 +10,8 @@ import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom'
 import CreateStudent from './components/CreateStudent'
 import EditStudent from './components/EditStudent'
 import StudentList from './components/StudentList'
+import StudentDetail from './components/StudentDetail'
+
 function App() {
   return (
     <div className="App">
@@ -62,6 +64,11 @@ function App() {
                     exact
                     path="/student-list"
                     element={<StudentList />}
+                  />
+                   <Route
+                    exact
+                    path="/student-detail/:id"
+                    element={<StudentDetail />}
                   />
                 </Routes>
               </div>

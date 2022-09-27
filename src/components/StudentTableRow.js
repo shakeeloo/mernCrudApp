@@ -19,9 +19,11 @@ const  StudentTableRow = (props)=>{
                 <td>{props.obj.email}</td>
                 <td>{props.obj.rollno}</td>
                 <td>
-                    <AiOutlineEye style={{fontSize:'1.7rem',cursor:'pointer',marginRight:'20px'}}/>
+                    <Link className="edit-link" to={"/student-detail/"+ props.obj._id}>
+                        <AiOutlineEye style={{fontSize:'1.7rem',cursor:'pointer',marginRight:'20px',color:'#212429'}}/>
+                    </Link>
                     <Link className="edit-link" to={"/edit-student/" + props.obj._id}>
-                    <AiOutlineEdit style={{fontSize:'1.7rem',cursor:'pointer',marginRight:'20px',color:'#212429'}}/>
+                        <AiOutlineEdit style={{fontSize:'1.7rem',cursor:'pointer',marginRight:'20px',color:'#212429'}}/>
                     </Link>
                     <AiOutlineDelete onClick={deleteStudent} style={{fontSize:'1.7rem',cursor:'pointer'}}/>
                    
